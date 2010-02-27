@@ -1,0 +1,30 @@
+<div id="feedback_button" class="white left normal"><a href="/feedback/">feedback</a></div>
+<div id="feedback_drop" class="hiding"></div>
+<div id="feedback_popup" class="hiding">
+    <form class="feedback" action="/feedback/ajax{{ request.path }}" method="POST">
+        <div class="name error"> </div>
+        <label for="email">email (optional)</label>
+            <input name="email"/>
+        <div class="subject error"> </div>
+        <label for="subject">subject (optional)</label>
+            <input name="subject"/>
+        <div class="text error"> </div>
+        <label for="text">message</label>
+            <textarea name="text"></textarea>
+        <div class="buttons">
+            <button>Send</button>
+        </div>
+    </form>
+    <div class="thanks hiding">Thank you for your feedback!</div>
+    <div class="close"></div>
+</div>
+
+<script>
+    $(function(){
+        feedback.init({
+            'button':$('#feedback_button'),
+            'drop':$('#feedback_drop'),
+            'popup':$('#feedback_popup')
+        });
+    });
+</script>

@@ -1,0 +1,157 @@
+
+#feedback_button {
+    position:fixed;
+    top:40%;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    cursor:pointer;
+}
+
+#feedback_button a {
+    display:none;
+}
+
+#feedback_button.white {
+    background-color:#AAA;
+    border:1px solid #999;
+}
+
+#feedback_button.black {
+    background-color:white;
+    border:1px solid #333;
+}
+
+#feedback_button.small {
+    height:100px;
+    width:15px;
+    margin-top:-50px;
+}
+
+#feedback_button.normal {
+    height:150px;
+    width:25px;
+    margin-top:-75px;
+}
+
+#feedback_button.left {
+    left:0;
+    border-left:none;
+}
+
+#feedback_button.right {
+    right:0;
+    border-right:none;
+}
+
+#feedback_button.white.left.normal {
+    background-image:url(images/feedback_wl.png);
+}
+#feedback_button.white.left.small {
+    background-image:url(images/feedback_wl_sm.png);
+}
+#feedback_button.white.right.normal {
+    background-image:url(images/feedback_wr.png);
+}
+#feedback_button.white.right.small {
+    background-image:url(images/feedback_wr_sm.png);
+}
+
+#feedback_button.black.left.normal {
+    background-image:url(images/feedback_bl.png);
+}
+#feedback_button.black.left.small {
+    background-image:url(images/feedback_bl_sm.png);
+}
+#feedback_button.black.right.normal {
+    background-image:url(images/feedback_br.png);
+}
+#feedback_button.black.right.small {
+    background-image:url(images/feedback_br_sm.png);
+}
+
+div.hiding {
+    display:none;
+}
+
+#feedback_drop {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:black;
+    opacity:.7;
+}
+
+#feedback_popup {
+    width:250px;
+    min-height:210px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:-125px;
+    margin-left:-175px;
+    background-color:white;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    overflow:visible;
+}
+
+#feedback_popup.thanks {
+    font-size: 14px;
+    font-weight: bold;
+    height: 17px !important;
+    min-height: 10px;
+    padding: 10px;
+}
+
+#feedback_popup .thanks {
+    display:none;
+}
+
+#feedback_popup.thanks .thanks {
+    display:block;
+}
+
+#feedback_popup.thanks form {
+    display:none;
+}
+
+#feedback_popup form {
+    height:100%;
+    position:absolute;
+    left:10px;
+    right:10px;
+    padding-top:10px;
+}
+
+#feedback_popup .error {
+    background-color:red;
+}
+
+#feedback_popup .close {
+    position:absolute;
+    top:-18px;
+    right:-18px;
+    width:32px;
+    height:32px;
+    background-image:url(images/close_med.png);
+    z-index:10;
+    cursor:pointer;
+}
+
+/** form stuff **/
+label {
+    font-size:.8em;
+    color:#555;
+    display:block;
+}
+
+textarea {
+    min-height:70px;
+    width:221px;
+}
+
+input {
+    width:223px;
+}

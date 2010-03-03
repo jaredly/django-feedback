@@ -1,4 +1,5 @@
 import os
+#from setuptools import setup
 from distutils.core import setup
 
 def read(fname):
@@ -8,12 +9,12 @@ setup(
     name='django-feedback',
     version='0.4',
     description='A pluggable user feedback app',
-    long_description=read('README.rst'),
     author='Jared Forsyth',
     author_email='jabapyth@gmail.com',
     license='BSD',
     url='http://github.com/jabapyth/django-feedback/',
     keywords = ['blog', 'django', 'feedback', 'ajax', 'user', 'customer', 'comment'],
+    package_data = {'feedback':['media/*.js','media/*.css','media/images/*','CREDITS']},
     packages=[
         'feedback',
     ],
@@ -26,5 +27,4 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-    zip_safe=False,
 )

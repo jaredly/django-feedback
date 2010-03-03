@@ -1,6 +1,15 @@
-===Feedback===
-highly configurable. will put more here.
+Feedback
+========
 
-for now, all you need is to {% include "feedback/header.html" %} in your
-header, and {% include "feedback/button.html" %} in the body somewhere.
+creates an ajax "feedback" button on your site, which pops up a form for the
+user to fill.
 
+Usage (only requires template modifications)::
+
+    <!-- in header block -->
+    {% include "feedback/header.html" %}
+    
+    <!-- in body block -->
+    {% include "feedback/button.html" %}
+
+You also need to symlink feedback/media into your static media directory.

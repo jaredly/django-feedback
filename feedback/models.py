@@ -10,6 +10,3 @@ class Feedback(models.Model):
 
     def __unicode__(self):
         return u'%s: %s' % (self.url, self.subject)
-
-
-# Create your models here.

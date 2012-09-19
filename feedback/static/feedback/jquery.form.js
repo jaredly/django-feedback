@@ -16,12 +16,11 @@ $.fn.ajaxSubmit = function(options) {
         var params = {};
         var theform = $(this);
         $(this)
-        .find("input[checked], input[type='text'], input[type='hidden'], input[type='password'], input[type='submit'], option[selected], textarea")
+        .find("input, option[selected], textarea")
         .filter(":enabled")
         .each(function() {
             params[ this.name || this.id || this.parentNode.name || this.parentNode.id ] = this.value;
         });
-        console.log(params);
         
         options['onstart']();
         var theurl = this.action;
@@ -59,4 +58,4 @@ $.fn.ajaxSubmit = function(options) {
         return false;
     });
     return this;
-}
+};

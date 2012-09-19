@@ -7,8 +7,7 @@ from django.core.mail import send_mail
 import json
 from feedback import forms
 
-import appsettings
-settings = appsettings.settings.feedback
+from django.conf import settings
 
 def sanitize(errors):
     dct = dict((str(k),list(force_unicode(a) for a in v)) for k,v in errors.items())
@@ -26,12 +25,12 @@ def handle_ajax(request, url):
         form = forms.FeedbackForm(post)
         if form.is_valid():
             form.save()
-            if settings.mailto:
+            if hasattr(settings, 'FEEDBACK_EMAIL'):
                 try:
-                    send_mail('Feedback recived: '+form.cleaned_data['subject'], 
+                    send_mail('Feedback received: '+form.cleaned_data['subject'], 
                             'email: %s \n\n %s'%(form.cleaned_data['email'], form.cleaned_data['text']), 
-                            'from@example.com',
-                            [settings.mailto], fail_silently=False)
+                            settings.SERVER_EMAIL,
+                            [settings.FEEDBACK_EMAIL], fail_silently=False)
                 except:
                     return HttpResponse(json.dumps({'error':'Failed to send email'}))
             return HttpResponse(json.dumps({}))

@@ -2,6 +2,7 @@
 <div id="feedback_drop" class="hiding"></div>
 <div id="feedback_popup" class="hiding">
     <form class="feedback" action="/feedback/ajax{{ request.path }}" method="POST">
+        {% csrf_token %}
         <div class="name error"> </div>
         <label for="email">email (optional)</label>
             <input name="email"/>

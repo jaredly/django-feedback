@@ -1,11 +1,9 @@
-from django.conf.urls.defaults import *
-from django.contrib import admin
-admin.autodiscover()
+from django.conf.urls.defaults import patterns, url
 
-from feedback.views import handle_ajax
+from feedback.views import FeedbackView
 
 urlpatterns = patterns('',
-        (r'^ajax(?P<url>.*)$', handle_ajax)
+        url(r'^ajax(?P<url>.*)$', FeedbackView.as_view(), name='feedback')
     )
 
 # vim: et sw=4 sts=4

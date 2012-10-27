@@ -12,4 +12,4 @@ class Feedback(models.Model):
     text = models.TextField(verbose_name=_('text'))
 
     def __unicode__(self):
-        return u'%s: %s' % (self.url, self.subject)
+        return u'{url}: {subject}'.format(url=self.url, subject=self.subject)

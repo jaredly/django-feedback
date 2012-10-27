@@ -1,3 +1,5 @@
-<link rel="stylesheet" href="{{ STATIC_URL }}feedback/main.css"/>
-<script src="{{ STATIC_URL }}feedback/jquery.form.js"></script>
-<script src="{{ STATIC_URL }}feedback/main.js"></script>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'feedback/main.css' %}"/>
+<script src="{% static 'feedback/jquery.form.js' %}"></script>
+<script src="{% static 'feedback/main.js' %}"></script>

@@ -1,3 +1,6 @@
 build/
 *.pyc
 .vim*
+MANIFEST
+dist/
+django_feedback.egg-info/

@@ -7,11 +7,11 @@ def read(fname):
 
 setup(
     name='django-feedback',
-    version='0.4',
+    version='0.4.1',
     description='A pluggable user feedback app',
     author='Jared Forsyth',
     author_email='jabapyth@gmail.com',
-    license='BSD',
+    license='Apache v2',
     url='http://github.com/unaizalakain/django-feedback/',
     keywords = ['blog', 'django', 'feedback', 'ajax', 'user', 'customer', 'comment'],
     package_data = {'feedback': ['static/feedback/*', 'static/feedback/images/*', 'CREDITS']},

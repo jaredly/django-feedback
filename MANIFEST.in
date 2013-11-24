@@ -1,0 +1,6 @@
+include feedback/static/feedback/jquery.form.js
+include feedback/static/feedback/main.css
+include feedback/static/feedback/main.js
+include feedback/static/feedback/images/*.png
+recursive-include feedback/templates *.html
+recursive-include feedback/locale *.po

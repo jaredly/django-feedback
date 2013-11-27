@@ -14,7 +14,7 @@ setup(
     license='Apache v2',
     url='http://github.com/unaizalakain/django-feedback/',
     keywords = ['blog', 'django', 'feedback', 'ajax', 'user', 'customer', 'comment'],
-    package_data = {'feedback': ['static/feedback/*', 'static/feedback/images/*', 'CREDITS']},
+    package_data = {'feedback': ['static/feedback/*.js', 'static/feedback/*.css', 'static/feedback/images/*.png', 'CREDITS']},
     packages=[
         'feedback',
     ],

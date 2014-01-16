@@ -11,6 +11,10 @@ user to fill.
 
 + Sync the database
 
++ Add a line to your urls.py::
+
+    url(r'^feedback/', include('feedback.urls')),
+
 + Use it (only requires template modifications)::
 
     <!-- in header block -->

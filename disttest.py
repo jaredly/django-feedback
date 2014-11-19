@@ -160,7 +160,7 @@ def run_py_test(tester):
     if py:
         py.test.cmdline.main(test_files)
     else:
-        print 'WARNING: py.test not found. falling back to unittest. For more informative errors, install py.test'
+        print('WARNING: py.test not found. falling back to unittest. For more informative errors, install py.test')
         import unittest
         suite = unittest.TestSuite()
         for filen in test_files:

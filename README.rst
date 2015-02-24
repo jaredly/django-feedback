@@ -22,3 +22,9 @@ user to fill.
     
     <!-- in body block -->
     {% include "feedback/button.html" %}
+
++ All feedback can be seen in the Django admin interface
+
++ Feedback can optionally be emailed to you as well, as it is submitted. Specify your email address in settings.py:
+
+    FEEDBACK_EMAIL = "me@example.com"

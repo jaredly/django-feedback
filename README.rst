@@ -1,6 +1,10 @@
 Feedback
 ========
 
+    As you might notice from the `last edit date` on most of these files, I haven't been using Django for a while now. As such, this project is **open for adoption**, and while I'm happy to still accept pull requests, I don't expect to develop new changes.
+
+
+
 Creates an ajax "feedback" button on your site, which pops up a form for the
 user to fill.
 

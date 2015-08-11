@@ -12,6 +12,8 @@ $.fn.ajaxSubmit = function(options) {
     this.action = null;
     this.onsubmit = function(){return false;};
     this.submit(function(e){
+        $("#urlhash").val(window.location.hash)
+        $("#useragent").val(navigator.userAgent)
         e.preventDefault();
         var params = {};
         var theform = $(this);

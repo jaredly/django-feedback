@@ -17,7 +17,6 @@ $.fn.ajaxSubmit = function(options) {
         var theform = $(this);
         $(this)
         .find("input, option[selected], textarea")
-        .filter(":enabled")
         .each(function() {
             params[ this.name || this.id || this.parentNode.name || this.parentNode.id ] = this.value;
         });

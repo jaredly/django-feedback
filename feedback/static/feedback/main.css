@@ -1,5 +1,5 @@
 
-#feedback_button {
+.feedback_button {
     position:fixed;
     top:40%;
     background-repeat:no-repeat;
@@ -7,65 +7,65 @@
     cursor:pointer;
 }
 
-#feedback_button a {
+.feedback_button a {
     display:none;
 }
 
-#feedback_button.white {
+.feedback_button.white {
     background-color:#AAA;
     border:1px solid #999;
 }
 
-#feedback_button.black {
+.feedback_button.black {
     background-color:white;
     border:1px solid #333;
 }
 
-#feedback_button.small {
+.feedback_button.small {
     height:100px;
     width:15px;
     margin-top:-50px;
 }
 
-#feedback_button.normal {
+.feedback_button.normal {
     height:150px;
     width:25px;
     margin-top:-75px;
 }
 
-#feedback_button.left {
+.feedback_button.left {
     left:0;
     border-left:none;
 }
 
-#feedback_button.right {
+.feedback_button.right {
     right:0;
     border-right:none;
 }
 
-#feedback_button.white.left.normal {
+.feedback_button.white.left.normal {
     background-image:url(images/feedback_wl.png);
 }
-#feedback_button.white.left.small {
+.feedback_button.white.left.small {
     background-image:url(images/feedback_wl_sm.png);
 }
-#feedback_button.white.right.normal {
+.feedback_button.white.right.normal {
     background-image:url(images/feedback_wr.png);
 }
-#feedback_button.white.right.small {
+.feedback_button.white.right.small {
     background-image:url(images/feedback_wr_sm.png);
 }
 
-#feedback_button.black.left.normal {
+.feedback_button.black.left.normal {
     background-image:url(images/feedback_bl.png);
 }
-#feedback_button.black.left.small {
+.feedback_button.black.left.small {
     background-image:url(images/feedback_bl_sm.png);
 }
-#feedback_button.black.right.normal {
+.feedback_button.black.right.normal {
     background-image:url(images/feedback_br.png);
 }
-#feedback_button.black.right.small {
+.feedback_button.black.right.small {
     background-image:url(images/feedback_br_sm.png);
 }
 

@@ -17,6 +17,7 @@ feedback.init = function(config) {
     });
 
     config.button.click(function(){
+        $("body").addClass("modal-open");
         config.drop.removeClass('hiding');
         config.popup.removeClass('hiding');
         config.popup.find('input[name=email]').focus();
@@ -40,6 +41,7 @@ feedback.closeit = function(config, erease) {
         config.popup.removeClass('thanks');
         config.popup.css('display','');
         config.drop.css('display','');
+        $("body").removeClass("modal-open");
         if(erease){
            config.popup.find('textarea').val('');
            config.popup.find('input[name=subject]').val('');

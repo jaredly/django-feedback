@@ -22,14 +22,14 @@ feedback.init = function(config) {
         config.popup.removeClass('hiding');
         config.popup.find('input[name=email]').focus();
     });
-    config.popup.find('.close').click(feedback.closeit(config, true));
+    config.popup.find('.close').click(feedback.closeit(config, false));
     config.drop.click(feedback.closeit(config, false));
 };
 
 feedback.done = function(config) {
     return function() {
         config.popup.addClass('thanks');
-        config.popup.delay(1000).fadeOut(500, feedback.closeit(config));
+        config.popup.delay(1000).fadeOut(500, feedback.closeit(config, true));
         config.popup.delay(1000).fadeOut(500);
     };
 };

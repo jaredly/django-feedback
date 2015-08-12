@@ -81,6 +81,7 @@ div.hiding {
     bottom:0;
     background-color:black;
     opacity:.7;
+    z-index: 10000;
 }
 
 #feedback_popup {
@@ -95,6 +96,7 @@ div.hiding {
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     overflow:visible;
+    z-index: 10001;
 }
 
 #feedback_popup.thanks {

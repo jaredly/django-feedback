@@ -19,11 +19,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='feedback',
             name='urlhash',
-            field=models.TextField(default=b'', verbose_name='urlhash'),
+            field=models.TextField(default=b'', null=True, blank=True, verbose_name='urlhash'),
         ),
         migrations.AddField(
             model_name='feedback',
             name='useragent',
-            field=models.TextField(default=b'', verbose_name='useragent'),
+            field=models.TextField(default=b'', null=True, blank=True, verbose_name='useragent'),
         ),
     ]

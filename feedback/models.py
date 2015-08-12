@@ -6,8 +6,8 @@ from django.utils.translation import ugettext as _
 class Feedback(models.Model):
     site = models.ForeignKey(Site, verbose_name=_('site'))
     url = models.CharField(max_length=255, verbose_name=_('url'))
-    urlhash = models.TextField(verbose_name=_('urlhash'), default="")
-    useragent = models.TextField(verbose_name=_('useragent'), default="")
+    urlhash = models.TextField(verbose_name=_('urlhash'), default="", null=True, blank=True)
+    useragent = models.TextField(verbose_name=_('useragent'), default="", null=True, blank=True)
     subject = models.CharField(max_length=255, blank=True, null=True,
             verbose_name=_('subject'))
     email = models.EmailField(blank=True, null=True, verbose_name=_('email'))

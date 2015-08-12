@@ -31,7 +31,7 @@ user to fill.
 
     <!-- in body block -->
     {% include "feedback/button.html" %}
-    <div id="feedback_button"/>
+    <div class="feedback_button"/>
    
 
 + All feedback can be seen in the Django admin interface

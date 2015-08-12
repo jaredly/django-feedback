@@ -21,7 +21,8 @@ feedback.init = function(config) {
         config.popup.removeClass('hiding');
         config.popup.find('input[name=email]').focus();
     });
-    config.popup.find('.close').click(feedback.closeit(config));
+    config.popup.find('.close').click(feedback.closeit(config, true));
+    config.drop.click(feedback.closeit(config, false));
 };
 
 feedback.done = function(config) {
@@ -32,14 +33,16 @@ feedback.done = function(config) {
     };
 };
 
-feedback.closeit = function(config) {
+feedback.closeit = function(config, erease) {
     return function(){
         config.drop.addClass('hiding');
         config.popup.addClass('hiding');
         config.popup.removeClass('thanks');
         config.popup.css('display','');
         config.drop.css('display','');
-        config.popup.find('textarea').val('');
-        config.popup.find('input[name=subject]').val('');
+        if(erease){
+           config.popup.find('textarea').val('');
+           config.popup.find('input[name=subject]').val('');
+        }
     };
 };

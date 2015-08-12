@@ -95,6 +95,7 @@ div.hiding {
     background-color:white;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
+    border-radius:10px;
     overflow:visible;
     z-index: 10001;
 }
@@ -102,7 +103,6 @@ div.hiding {
 #feedback_popup.thanks {
     font-size: 14px;
     font-weight: bold;
-    height: 17px !important;
     min-height: 10px;
     padding: 10px;
 }
@@ -121,10 +121,9 @@ div.hiding {
 
 #feedback_popup form {
     height:100%;
-    position:absolute;
     left:10px;
     right:10px;
-    padding-top:10px;
+    padding:10px;
 }
 
 #feedback_popup .error {

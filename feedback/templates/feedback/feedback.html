@@ -2,6 +2,7 @@
 <div id="feedback_drop" class="hiding"></div>
 <div id="feedback_popup" class="hiding">
     <form class="feedback" action="/feedback/ajax{{ request.path }}" method="POST">
+        <h4>{% trans "Enter your feedback" %}</h4>
         {% csrf_token %}
         <input type="hidden" id="urlhash" name="urlhash"/>
         <input type="hidden" id="useragent" name="useragent"/>

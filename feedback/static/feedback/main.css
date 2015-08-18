@@ -87,11 +87,10 @@ div.hiding {
 #feedback_popup {
     width:250px;
     min-height:210px;
-    position:fixed;
-    top:50%;
-    left:50%;
-    margin-top:-125px;
-    margin-left:-175px;
+    position:absolute;
+    left:0px;
+    right:0px;
+    margin:auto;
     background-color:white;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;

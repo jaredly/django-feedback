@@ -1,0 +1,34 @@
+{% load i18n %}
+<div id="feedback_drop" class="hiding"></div>
+<div id="feedback_popup" class="hiding">
+    <form class="feedback" action="/feedback/ajax{{ request.path }}" method="POST">
+        <h4>{% trans "Enter your feedback" %}</h4>
+        {% csrf_token %}
+        <input type="hidden" id="urlhash" name="urlhash"/>
+        <input type="hidden" id="useragent" name="useragent"/>
+        <div class="email error"> </div>
+        <label for="email">{% trans "email (optional)" %}</label>
+            <input name="email" class="emailinput"/>
+        <div class="subject error"> </div>
+        <label for="subject">{% trans "subject (optional)" %}</label>
+            <input name="subject" class="subjectinput"/>
+        <div class="text error"> </div>
+        <label for="text">{% trans "message" %}</label>
+            <textarea name="text" class="messageinput"></textarea>
+        <div class="buttons">
+            <button class="feedback_button">{% trans "Send" %}</button>
+        </div>
+    </form>
+    <div class="thanks hiding">{% trans "Thank you for your feedback!" %}</div>
+    <div class="close"></div>
+</div>
+
+<script>
+    $(function(){
+        feedback.init({
+            'button':$('.feedback_button'),
+            'drop':$('#feedback_drop'),
+            'popup':$('#feedback_popup')
+        });
+    });
+</script>

@@ -3,6 +3,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail
+from django.utils.translation import ugettext as _
 
 import json
 
@@ -31,8 +32,8 @@ class FeedbackView(CreateView):
             d = form.cleaned_data
             try:
                 send_mail(
-                        'Feedback received: {}'.format(d['subject']),
-                        'email: {} \n\n {}'.format(d['email'], d['text']),
+                        u'Feedback received: {}'.format(d['subject']),
+                        u'email: {} \n\n {}'.format(d['email'], d['text']),
                         settings.SERVER_EMAIL,
                         [settings.FEEDBACK_EMAIL],
                         fail_silently=False,

@@ -27,7 +27,16 @@ user to fill.
     <!-- in body block -->
     {% include "feedback/button.html" %}
 
++ Or use your own button::
+
+    <!-- in body block -->
+    {% include "feedback/button.html" %}
+    <div class="feedback_button"/>
+   
+
 + All feedback can be seen in the Django admin interface
+
++ Class "modal-open" is added to body for compatibility with Bootstrap modal.
 
 + Feedback can optionally be emailed to you as well, as it is submitted. Specify your email address in settings.py:
 

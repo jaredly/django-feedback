@@ -17,10 +17,11 @@ class FeedbackView(CreateView):
 
     def get_form_kwargs(self):
         kwargs = super(FeedbackView, self).get_form_kwargs()
-        post = kwargs['data'].copy()
-        post['url'] = self.kwargs['url']
-        post['site'] = Site.objects.get_current().pk
-        kwargs['data'] = post
+        if 'data' in kwargs:
+            post = kwargs['data'].copy()
+            post['url'] = self.kwargs['url']
+            post['site'] = Site.objects.get_current().pk
+            kwargs['data'] = post
         return kwargs
 
     def get_success_url(self):

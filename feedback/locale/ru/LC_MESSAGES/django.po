@@ -1,0 +1,77 @@
+# Russian translation of Django-Feedback.
+# Copyright © 2013-2015 Jared Forsyth
+# This file is distributed under the same license as the Django-Feedback.
+# Oleg Frantsuzov <franoleg@gmail.com>, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Django-Feedback 0.4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-10 18:28+0300\n"
+"PO-Revision-Date: 2015-12-11 02:40+0300\n"
+"Last-Translator: Oleg Frantsuzov <franoleg@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: feedback/models.py:7
+msgid "site"
+msgstr "сайт"
+
+#: feedback/models.py:8
+msgid "url"
+msgstr "url"
+
+#: feedback/models.py:9
+msgid "urlhash"
+msgstr "urlhash"
+
+#: feedback/models.py:10
+msgid "useragent"
+msgstr "useragent"
+
+#: feedback/models.py:12
+msgid "subject"
+msgstr "тема"
+
+#: feedback/models.py:13
+msgid "email"
+msgstr "электронная почта"
+
+#: feedback/models.py:14
+msgid "text"
+msgstr "текст"
+
+#: feedback/templates/feedback/feedback.html:5
+msgid "Enter your feedback"
+msgstr "Напишите ваш отзыв"
+
+#: feedback/templates/feedback/feedback.html:10
+msgid "email (optional)"
+msgstr "электронная почта (необязательно)"
+
+#: feedback/templates/feedback/feedback.html:13
+msgid "subject (optional)"
+msgstr "тема (необязательно)"
+
+#: feedback/templates/feedback/feedback.html:16
+msgid "message"
+msgstr "сообщение"
+
+#: feedback/templates/feedback/feedback.html:19
+msgid "Send"
+msgstr "Отправить"
+
+#: feedback/templates/feedback/feedback.html:22
+msgid "Thank you for your feedback!"
+msgstr "Спасибо, что оставили ваш отзыв!"
+
+#: feedback/views.py:43
+msgid "Failed to send email"
+msgstr "Не удалось отправить сообщение"

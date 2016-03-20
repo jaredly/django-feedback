@@ -23,10 +23,10 @@ user to fill.
     <!-- in body block -->
     {% include "feedback/button.html" %}
 
-+ Or use your own button::
++ Or use your own button which pops up feedback form::
 
     <!-- in body block -->
-    {% include "feedback/button.html" %}
+    {% include "feedback/feedback.html" %}
     <div class="feedback_button"/>
    
 

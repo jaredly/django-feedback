@@ -3,6 +3,7 @@
 import os
 #from setuptools import setup
 from distutils.core import setup
+from setuptools import find_packages
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
@@ -16,10 +17,8 @@ setup(
     license='Apache v2',
     url='http://github.com/unaizalakain/django-feedback/',
     keywords = ['blog', 'django', 'feedback', 'ajax', 'user', 'customer', 'comment'],
-    package_data = {'feedback': ['static/feedback/*.js', 'static/feedback/*.css', 'static/feedback/images/*.png', 'CREDITS']},
-    packages=[
-        'feedback',
-    ],
+    package_data = {'feedback': ['static/feedback/*.js', 'static/feedback/*.css', 'static/feedback/images/*.png', 'migrations/*.py', 'locale/*/*/*.po', 'locale/*/*/*.mo', 'templates/*/*.html', 'CREDITS']},
+    packages=find_packages(),
     include_package_data=True,
     classifiers=[
         'Development Status :: 4 - Beta',

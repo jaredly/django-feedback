@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('subject', models.CharField(max_length=255, null=True, verbose_name='subject', blank=True)),
                 ('email', models.EmailField(max_length=254, null=True, verbose_name='email', blank=True)),
                 ('text', models.TextField(verbose_name='text')),
-                ('site', models.ForeignKey(verbose_name='web', to='sites.Site')),
+                ('site', models.ForeignKey(verbose_name='web', to='sites.Site', on_delete=models.CASCADE)),
             ],
         ),
     ]

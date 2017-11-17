@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Feedback(models.Model):
-    site = models.ForeignKey(Site, verbose_name=_('site'))
+    site = models.ForeignKey(Site, verbose_name=_('site'), on_delete=models.CASCADE)
     url = models.CharField(max_length=255, verbose_name=_('url'))
     urlhash = models.TextField(verbose_name=_('urlhash'), default="", null=True, blank=True)
     useragent = models.TextField(verbose_name=_('useragent'), default="", null=True, blank=True)

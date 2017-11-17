@@ -3,18 +3,31 @@ language: python
 env:
   - DJANGO_VERSION="Django>=1.8,<1.9"
   - DJANGO_VERSION="Django>=1.9,<1.10"
+  - DJANGO_VERSION="Django>=1.10,<1.11"
+  - DJANGO_VERSION="Django>=1.11,<2.0"
+  - DJANGO_VERSION="Django>=2.0,<2.1"
   - DJANGO_VERSION='https://github.com/django/django/archive/master.tar.gz'
 python:
   - "2.7"
   - "3.4"
+  - "3.5"
+  - "3.6"
 before_script:
   - pip install coverage coveralls
-  - pip install -q "$DJANGO_VERSION"
+  - pip install -q $DJANGO_VERSION
   - python setup.py install
 script:
+  - django-admin --version
   - coverage run manage.py test --settings=test_settings
 after_script:
   - coveralls
 matrix:
+   exclude:
+      - env: DJANGO_VERSION="Django>=2.0,<2.1"
+        python: "2.7"
+      - env: DJANGO_VERSION='https://github.com/django/django/archive/master.tar.gz'
+        python: "2.7"
+      - env: DJANGO_VERSION='https://github.com/django/django/archive/master.tar.gz'
+        python: "3.4"
    allow_failures:
       - env: DJANGO_VERSION='https://github.com/django/django/archive/master.tar.gz'
